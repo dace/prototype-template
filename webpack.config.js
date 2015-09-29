@@ -19,6 +19,10 @@ module.exports = {
       test: /\.(css|styl)$/, 
       exclude: /node_modules/,
       loader: ExtractTextPlugin.extract('style', 'css!stylus')
+    }, {
+      test: /\.(png|gifv?|jpe?g|svg|jpg)$/,
+      exclude: /node_modules/,
+      loader: "file?name=img/[name].[ext]"
     }]
   },
   plugins: [
